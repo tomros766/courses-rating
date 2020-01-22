@@ -49,6 +49,7 @@ export class CourseDetailsComponent implements OnInit {
 
   signUpToCourse() {
     if (this.userService.getUser() !== null) {
+      console.log(this.course);
       this.coursesservice.signUp(this.course);
     } else { alert('Aby zapisać się na kurs musisz być zalogowany!'); }
   }

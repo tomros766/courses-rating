@@ -2,23 +2,10 @@
   <img src={{course.avatarUrl}}/>
   <h4>{{course.name | uppercase }}</h4>
   <div class='options'>
-    <!-- <button (click)=expand()>{{changeView}}</button> -->
     <button routerLink="/course/{{course.id}}"  type="button" class="btn btn-secondary">Szczegóły</button>
     <button    routerLink="/editcourse/{{course.id}}" class="btn-secondary" [(hidden)]=!isAdmin >Edytuj</button>
     <button   (click)=removeKurs(course)  type="button" class="btn-secondary" [(hidden)]=!isAdmin >Usuń</button>
 
   </div>
-
-  <!-- <div class='details' [hidden]="detailsHidden">
-    <div>ects: {{course.ects}}</div>
-    <div>semestr: {{course.semester}}</div>
-    <div>Forma prowadzenia zajęć: {{course.form}}</div>
-    <div>Maksymalna liczba studentów: {{course.studentLimit}}</div>
-    <div>Opis: {{course.description}}</div>
-    <div style="text-align:center"  (mouseover)="showNumber()" (mouseout)="hideNumber()">
-        <star-rating addHalfStarClass="true" value="{{course.rate}}" totalstars="5" checkedcolor="gold" uncheckedcolor="gray" size="24px" readonly="false" (rate)="onRate($event)"></star-rating>
-        <p [hidden]="numberHidden">Aktualna ocena: {{course.rate | number: '1.0-2'}}</p>
-      </div>
-  </div> -->
 </div>
 

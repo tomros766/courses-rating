@@ -146,7 +146,8 @@ export class CoursesService {
     if (course.countOfRates < course.studentLimit) {
       if (!course.participants.includes(firebase.auth().currentUser.uid)) {
         course.participants.push(firebase.auth().currentUser.uid);
-        this.data.doc(course.id).set({course}, {merge: true});
+        this.update(course);
+        alert('Zostałeś zapisany!');
       } else { alert('Jesteś już zapisany na ten kurs'); }
     } else { alert('Nie mozesz zapisac się na ten kurs! Liczba miejsc została przekroczona!'); }
   }

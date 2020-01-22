@@ -8,8 +8,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class UserServiceService {
 
-  userData: Observable<firebase.User>;
-  isAdmin = false;
+
 
   constructor(private angularFireAuth: AngularFireAuth, private db: AngularFirestore) {
     this.userData = angularFireAuth.authState;
@@ -18,6 +17,9 @@ export class UserServiceService {
     this.db.collection('admin').get()
     .subscribe(data => data.forEach(param => {if (this.getUser() && param.get('email') === this.getUser().email) { this.isAdmin = true; }}));
   }
+
+  userData: Observable<firebase.User>;
+  isAdmin = false;
 
   getDB() {return this.db; }
 

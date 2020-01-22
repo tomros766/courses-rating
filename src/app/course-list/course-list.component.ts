@@ -22,7 +22,7 @@ export class CourseListComponent implements OnInit {
 
 constructor(private userService: UserServiceService, private coursesservice: CoursesService) {
   this.userService.getDB().collection('admin').get()
-  .subscribe(data => data.forEach(param => {if (param.get('email') === this.userService.getUser()) { this.isAdmin = true; }}));
+  .subscribe(data => data.forEach(param => {if (this.userService.getUser() && param.get('email') === this.userService.getUser().email) { this.isAdmin = true; }}));
 }
 
 courses: Course[];

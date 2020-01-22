@@ -17,7 +17,7 @@ export class CourseComponent implements OnInit {
     .subscribe(data => data
       .forEach(param =>
         {if (this.userService.getUser() && param.get('email') === this.userService.getUser().email)
-          { this.isAdmin = true; console.log(this.isAdmin); }}));
+          { this.isAdmin = true; }}));
   }
 
 

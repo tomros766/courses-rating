@@ -11,17 +11,6 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="white"><a routerLink="/main">Zobacz Kursy</a></li>
-        <!-- <li>
-          <div class="dropdown">
-            <button class="btn dropdown-toggle margin-for-button" type="button" data-toggle="dropdown">Zarządzaj Kursami
-            <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-              <li><a routerLink="/addCourse">Dodaj Kurs</a></li>
-              <li><a routerLink="/editCourse">Edytuj Kurs</a></li>
-              <li><a routerLink="/deleteCourse">Usuń kurs</a></li>
-            </ul>
-          </div>
-        </li> -->
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <div *ngIf = "isLogged(); then logged else unknown"></div>
@@ -31,10 +20,10 @@
         </ng-template>
         <ng-template #logged>
           <li>
-          <p class="white">Hello, {{loggedUser.email}}</p>
+          <p class="white">Witaj, {{loggedUser.email}}</p>
 
           </li>
-          <li class="white"><a (click)="signOut()" routerLink="/login"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+          <li class="white"><a (click)="signOut()" routerLink="/login"><span class="glyphicon glyphicon-log-out"></span> Wyloguj się</a></li>
         </ng-template>
       </ul>
     </div>

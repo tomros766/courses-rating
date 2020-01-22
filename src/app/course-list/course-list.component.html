@@ -24,10 +24,6 @@
   <ng-container *ngIf="(courses | searchPipe:searchText | rates:searchRating | semester:searchSemester | ects:searchECTS) as filteredCourses">
     <div *ngFor="let course of filteredCourses | paginate: {itemsPerPage: iPP, currentPage: p}; let even=even; let i = index" [ngClass]="{'even-course': even}">
       <app-course [course]=course [index]=i (courseTBR)="removeCourse($event)" ></app-course>
-      <!-- <div class='text-left'>
-        <button routerLink="/course/{{i}}">Szczegóły</button>
-        <button [hidden]=isNotAdmin() routerLink="/editcourse/{{i}}">Edytuj</button>
-      </div> -->
     </div>
 
     <pagination-controls class="mypagination" (pageChange)="p = $event" previousLabel="poprzednia" nextLabel="nastepna"></pagination-controls>
