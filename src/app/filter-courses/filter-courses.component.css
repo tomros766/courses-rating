@@ -1,0 +1,14 @@
+.form{
+  width: 80%;
+  margin: auto;
+}
+.form-control{
+  width: auto;
+}
+
+.row{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+}

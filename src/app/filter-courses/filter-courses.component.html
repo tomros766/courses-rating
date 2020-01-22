@@ -1,0 +1,25 @@
+  <h3 class="text-center">Filtruj kursy</h3>
+  <div class="form form-group inline-block">
+    <div class="row">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="col">
+        <label for="searchText">
+        <input  id="searchText"class="form-control"  [(ngModel)]="searchText" type="text"  (input)="textSearch()" placeholder="Nazwa kursu:"></label>
+      </div>
+      <div class="col">
+          <label for="searchRating">
+          <input id="searchRating"class="form-control"  [(ngModel)]="searchRating" min="0" max="5" type="number" (input)="ratingSearch()" placeholder="Minimalna ocena:"></label>
+      </div>
+      <div class="col">
+          <label for="searchSemester">
+          <input id="searchSemester" class="form-control" [(ngModel)]="searchSemester" min="0" max="10" type="number" (input)="semesterSearch()" placeholder="Semestr:"></label>
+      </div>
+      <div class="col">
+        <label for="searchECTS">
+        <input id="searchECTS"class="form-control"  [(ngModel)]="searchECTS" min="1" max="6" type="number" (input)="ECTSSearch()" placeholder="Ilość ECTS:"></label>
+      </div>
+    </div>
+  </div>
+

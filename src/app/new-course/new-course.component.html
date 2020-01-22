@@ -1,0 +1,45 @@
+
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit(modelForm)">
+  <h3>Dodaj przedmiot</h3>
+  <ng-container>
+    <label>nazwa: </label><input name="name"  formControlName="name">
+    <span *ngIf="formErrors.name">{{ formErrors.name }}</span>
+  </ng-container>
+
+<ng-container>
+    <label>ects: </label><input name="ects" formControlName="ects">
+    <span *ngIf="formErrors.ects">{{ formErrors.ects }}</span>
+</ng-container>
+
+<ng-container>
+    <label>semestr: </label><input name="semester"  formControlName="semester">
+    <span *ngIf="formErrors.semester">{{ formErrors.semester }}</span>
+</ng-container>
+
+<ng-container>
+    <label>forma prowadzenia zajęć: </label><input name="form"  formControlName="form">
+    <span *ngIf="formErrors.form">{{ formErrors.form }}</span>
+</ng-container>
+
+<ng-container>
+    <label>maksymalna liczba studentów: </label><input name="studentLimit"  formControlName="studentLimit">
+    <span *ngIf="formErrors.studentLimit">{{ formErrors.studentLimit }}</span>
+
+</ng-container>
+
+<ng-container>
+    <label>Link do miniaturki: </label><input name="avatarUrl"  formControlName="avatarUrl">
+    <span *ngIf="formErrors.avatarUrl">{{ formErrors.avatarUrl }}</span>
+
+</ng-container>
+
+<ng-container>
+    <label>opis przedmiotu: </label><input name="description"  formControlName="description">
+    <span *ngIf="formErrors.description">{{ formErrors.description }}</span>
+</ng-container>
+
+
+  <button [disabled]="!modelForm.valid" type="submit" class="btn btn-secondary">Dodaj</button>
+</form>
+
+

@@ -1,0 +1,28 @@
+
+.container{
+  margin-top: 60px;
+  width: 60%;
+}
+img{
+  width: 200px;
+  height: 200px;
+}
+
+#name{
+  text-transform: uppercase;
+}
+div{
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+}
+
+hr.style1 {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+
+#starz{
+  font-size: 14px;
+  vertical-align: middle;
+}

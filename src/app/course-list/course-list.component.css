@@ -1,0 +1,17 @@
+#courseList{
+  margin: 10px 20%;
+}
+
+.even-course{
+  background-color: lightgray;
+}
+
+.form-control{
+  width: 80px;
+}
+
+.mypagination /deep/ .ngx-pagination .current {
+  margin-top: 20px;
+}
+
+

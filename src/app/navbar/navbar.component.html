@@ -1,0 +1,42 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand white" href="#">CourseRating</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="white"><a routerLink="/main">Zobacz Kursy</a></li>
+        <!-- <li>
+          <div class="dropdown">
+            <button class="btn dropdown-toggle margin-for-button" type="button" data-toggle="dropdown">Zarządzaj Kursami
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a routerLink="/addCourse">Dodaj Kurs</a></li>
+              <li><a routerLink="/editCourse">Edytuj Kurs</a></li>
+              <li><a routerLink="/deleteCourse">Usuń kurs</a></li>
+            </ul>
+          </div>
+        </li> -->
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <div *ngIf = "isLogged(); then logged else unknown"></div>
+        <ng-template #unknown>
+          <li class="white"><a routerLink="/login"><span class="glyphicon glyphicon-user"></span> Zarejestruj się</a></li>
+          <li class="white"><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> Zaloguj się</a></li>
+        </ng-template>
+        <ng-template #logged>
+          <li>
+          <p class="white">Hello, {{loggedUser.email}}</p>
+
+          </li>
+          <li class="white"><a (click)="signOut()" routerLink="/login"><span class="glyphicon glyphicon-log-out"></span> Log Out</a></li>
+        </ng-template>
+      </ul>
+    </div>
+  </div>
+</nav>

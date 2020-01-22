@@ -1,0 +1,19 @@
+<div class="margin col-xs-12">
+  <br>
+  <div class="center"><input placeholder="email" #email></div>
+  <br>
+  <div class="center"><input placeholder="password" type="password" #password></div>
+  <br>
+  <div class="center">
+      <button (click)="login(email, password)">Login</button>
+      <button (click)="register(email, password)">Register</button>
+  </div>
+  <br>
+  <div class="center">
+  <div *ngIf = "error; then thenBlock"></div>
+      <ng-template #thenBlock>
+          Wystąpił błąd! <br>
+          Sprawdź, czy dobrze wpisałeś e-mail i hasło oraz czy jesteś zarejestrowany!
+      </ng-template>
+  </div>
+</div>

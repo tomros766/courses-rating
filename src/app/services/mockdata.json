@@ -1,0 +1,112 @@
+ [
+    {
+      "name": "algebra",
+      "ects": 6,
+      "semester": 1,
+      "form": "Lecture",
+      "studentLimit": 150,
+      "rate": 3.9,
+      "countOfRates": 124,
+      "avatarUrl": "assets/img/algebra.png",
+      "description": "Nauczenie studentów: struktur algebraicznych (grupa, ciało, przestrzeń wektorowa liniowa), teorii macierzy, równań algebraicznych liniowych i form kwadratowych, podstaw do metod numerycznych algebry liniowej"
+    },
+    {
+      "name": "analiza 1",
+      "ects": 6,
+      "semester": 1,
+      "form": "CourseForm.Lecture",
+      "studentLimit": 100,
+      "rate": 3.4,
+      "countOfRates": 140,
+      "avatarUrl": "assets/img/analiza.png",
+      "description": "granica ciągów, rachunek różniczkowy i całkowy funkcji 1 zmiennej, przestrzenie metryczne. "
+    },
+    {
+      "name": "algorytmy i struktury danych",
+      "ects": 6,
+      "semester": 2,
+      "form": "Recitation",
+      "studentLimit": 25,
+      "rate": 4.3,
+      "countOfRates": 107,
+      "avatarUrl": "assets/img/asd.png",
+      "description": "Celem wykładu jest: zapoznanie z podstawowymi strukturami danych, wykonywanymi na nich operacjami oraz ich implementacjami. Przedmiot omawia podstawowe algorytmy i cechy oraz implementacje."
+    },
+    {
+      "name": "podstawy elektroniki",
+      "ects": 4,
+      "semester": 2,
+      "form": "Labs",
+      "studentLimit": 15,
+      "rate": 3.1,
+      "countOfRates": 131,
+      "avatarUrl": "assets/img/pe.png",
+      "description": "Program przedmiotu: obwód elektryczny, dioda półprzewodnikowa, tranzystor unipolarny MOS, wprowadzanie tranzystora MOS w zakres aktywny, praca tranzystora MOS w układzie klucza, bramki cyfrowe CMOS, wzmacniacz operacyjny, detektor progowy, generator relaksacyjny, pętla synchronizacji fazy PLL. "
+    },
+    {
+      "name": "podstawy baz danych",
+      "ects": 4,
+      "semester": 3,
+      "form": "Labs",
+      "studentLimit": 15,
+      "rate": 4.1,
+      "countOfRates": 140,
+      "avatarUrl": "assets/img/pbd.png",
+      "description": "Celem wykładu jest wprowadzenie w problematykę: systemów przetwarzania danych masowych oraz technologię baz danych. Ważnym jest zrozumienie sposobu rozwiązania podstawowych problemów związanych z integracją danych oraz funkcji użytkowych. Istotnym elementem jest zapoznanie się z wielopoziomowymi modelami systemu i sposobami ich realizacji. Po zakończeniu kursu student potrafi budować proste systemy baz danych realizowane w oparciu o model relacyjny. "
+    },
+    {
+      "name": "programowanie obiektowe",
+      "ects": 3,
+      "semester": 3,
+      "form": "Labs",
+      "studentLimit": 15,
+      "rate": 4.4,
+      "countOfRates": 150,
+      "avatarUrl": "assets/img/po.png",
+      "description": "Język Java (na bazie C i C++). Wprowadzenie: nowoczesne techniki w języku i orientacja na sieć, różnice w stosunku do C i C++. Przetwarzanie kodu źródłowego: maszyna wirtualna, narzędzia, platformy, klasy biblioteczne. Realizacja postulatów programowania obiektowego. Deklaracje i definicje skalarnych typów danych, zakres obowiązywania deklaracji, składowanie. Definicja klas i interfejsów: komponenty i dostęp do nich, specyfikacja dziedziczenia. Pakiety. Deklaracje i definicje instancji klas oraz ich usuwanie: konstruktory i destruktory, przypadki złożone, komponenty klasowe, implementacja interfejsów. Zarządzanie pamięcią. Operatory i wyrażenia. Konwersje. Instrukcje. Program i aplet. Wyjątki. Programowanie wielowątkowe. Metody i klasy abstrakcyjne. Mechanizm polimorfizmu: konwersja specjalna, metody polimorficzne. "
+    },
+    {
+      "name": "systemy operacyjne",
+      "ects": 5,
+      "semester": 4,
+      "form": "Labs",
+      "studentLimit": 100,
+      "rate": 2.1,
+      "countOfRates": 142,
+      "avatarUrl": "assets/img/sysopy.png",
+      "description": "Struktura i funkcje systemów operacyjnych. Jądro. Zarządzanie procesami, szeregowanie. Synchronizacja procesów. Komunikacja między procesami. Zakleszczenia, metody detekcji i przeciwdziałania. Zarządzanie pamięcią: pamięć wirtualna, stronicowanie, segmentacja, strategie przydziału. Linkowanie statyczne i dynamiczne. Podsystem we/wy. System plików. Rozproszone systemy operacyjne: funkcje i struktura. Przykłady systemów operacyjnych: Windows, UNIX, Linux. "
+    },
+    {
+      "name": "metody obliczeniowe w nauce i technice",
+      "ects": 4,
+      "semester": 4,
+      "form": "Labs",
+      "studentLimit": 15,
+      "rate": 2.2,
+      "countOfRates": 140,
+      "avatarUrl": "assets/img/mownit.png",
+      "description": "Celem wykładu jest: zapoznanie z podstawowymi metodami numerycznymi. Przedmiot omawia podstawowe algorytmy i cechy oraz implementacje, a także biblioteki numeryczne oraz pakiety do obliczeń naukowych i technicznych. "
+    },
+    {
+      "name": "Architektura komputerów",
+      "ects": 4,
+      "semester": 5,
+      "form": "Labs",
+      "studentLimit": 15,
+      "rate": 3.0,
+      "countOfRates": 127,
+      "avatarUrl": "assets/img/architektura.png",
+      "description": "Celem wykładu jest zaprezentowanie problematyki budowy sprzętu komputerowego, a w szczególności budowy komputerów wieloprocesorowych i organizacji dostępu do pamięci operacyjnej. Na wykładzie omawiane są również trendy i potencjalne kierunki rozwoju architektur. "
+    },
+    {
+      "name": "sieci komputerowe",
+      "ects": 4,
+      "semester": 4,
+      "form": "Labs",
+      "studentLimit": 15,
+      "rate": 3.5,
+      "countOfRates": 114,
+      "avatarUrl": "assets/img/sieci.png",
+      "description": "Model odniesienia systemów otwartych OSI-ISO RM. Media transmisji. Zasady budowy okablowania strukturalnego. Zasady budowy sieci Ethernet. Elementy sieciowe warstwy łącza danych: bridge, switche. Warstwa sieciowa, routery, zasady routingu w sieci IP, algorytmy routingu: RIP, IGRP. Elementy IPv6. Zasady adresacji w sieci IP. Usługi DNS, ARP, RARP. Protokół ICMP. Protokoły transportowe: UDP, TCP. Technologia ATM. Zasada działania switcha ATM. Sygnalizacja w sieci ATM. Protokół PNNI. Klasy ruchu w sieci ATM: CBR, ABR, UBR. Emulacja sieci LAN. Sieci wirtualne."
+    }
+  ]

@@ -1,0 +1,22 @@
+<div class="container">
+<div class="col-md-4"><img src={{course.avatarUrl}}/></div>
+  <h1 class="col-4 offset-2" id="name">{{course.name}}</h1>
+  <div id="ects">ects: {{course.ects}}</div>
+  <div id="studentLimit">maksymalna liczba studentów: {{course.studentLimit}}</div>
+  <div id="semester">semestr: {{course.semester}}</div>
+  <div id="form">forma prowadzenia zajęć: {{course.form}}</div>
+  <hr class="style1">
+  <div class="col-6 offset-4"id="description">{{course.description}}</div>
+
+  <div id="starz" style="text-align:center"  (mouseover)="showNumber()" (mouseout)="hideNumber()">
+    <star-rating class='col-md-3 col-md-offset-4' addHalfStarClass="true" value="{{course.rate}}" totalstars="5" checkedcolor="gold" uncheckedcolor="gray" size="24px" readonly="false" (rate)="onRate($event)"></star-rating>
+    <p class='col-md-2'  [hidden]="numberHidden">Aktualna ocena: {{course.rate | number: '1.0-2'}}</p>
+  </div>
+</div>
+<div class='text-center'>
+  <button [routerLink]="['/main']" routerLinkActive="router-link-active" type="button" class="btn btn-secondary">wróć</button>
+  <button (click)=signUpToCourse() type="button" class="btn btn-secondary" >zapisz się</button>
+</div>
+<br/>
+<br/>
+

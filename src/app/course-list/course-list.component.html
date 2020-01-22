@@ -1,0 +1,41 @@
+<ng-container *ngIf='isAdmin'> <app-new-course></app-new-course></ng-container>
+<app-filter-courses (ratingToSearch)="searchByRating($event)" (textToSearch)=searchByTitle($event) (semesterToSearch)=searchBySemester($event) (ECTSToSearch)=searchByEcts($event)></app-filter-courses>
+<div class='container align-bottom'>
+    <h2 class='col-md-12 align-top text-center'>Dostępne Kursy</h2>
+
+    <div id="ipp" class="form-group">
+      <label class='col-md-3 col-md-offset-6 text-right' for="sel1">Liczba elementów na stronie:</label>
+      <select [(ngModel)]="iPP" class="form-control col-md-1" id="sel1" >
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+        <option>50</option>
+      </select>
+    </div>
+</div>
+
+<div id="courseList">
+
+
+
+
+
+  <ng-container *ngIf="(courses | searchPipe:searchText | rates:searchRating | semester:searchSemester | ects:searchECTS) as filteredCourses">
+    <div *ngFor="let course of filteredCourses | paginate: {itemsPerPage: iPP, currentPage: p}; let even=even; let i = index" [ngClass]="{'even-course': even}">
+      <app-course [course]=course [index]=i (courseTBR)="removeCourse($event)" ></app-course>
+      <!-- <div class='text-left'>
+        <button routerLink="/course/{{i}}">Szczegóły</button>
+        <button [hidden]=isNotAdmin() routerLink="/editcourse/{{i}}">Edytuj</button>
+      </div> -->
+    </div>
+
+    <pagination-controls class="mypagination" (pageChange)="p = $event" previousLabel="poprzednia" nextLabel="nastepna"></pagination-controls>
+    <div *ngIf="!filteredCourses.length">
+      <div class="alert alert-info" role="alert">
+          Nie znaleziono kursów spełniający kryteria filtrowania
+      </div>
+  </div>
+  </ng-container>
+
+</div>
